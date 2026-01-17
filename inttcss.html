@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS with 3 Functions</title>
+
+    <style>
+        /* -----------------------------------------
+           INTERNAL CSS 
+           ----------------------------------------- */
+        
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Kanit', sans-serif;
+
+            /* ฟังก์ชันที่ 1: linear-gradient() 
+               สร้างพื้นหลังไล่เฉดสีให้ดูมีมิติ */
+            background: linear-gradient(45deg, #ee0979, #ff6a00);
+        }
+
+        .container {
+            /* ฟังก์ชันที่ 2: calc() 
+               คำนวณความกว้าง: เต็มจอ 100% ลบออก 40px เพื่อให้มีขอบเสมอ */
+            width: calc(100% - 40px);
+            max-width: 500px;
+            
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            /* ฟังก์ชันที่ 3: clamp() 
+               ตัวอักษรจะปรับขนาดเอง: เล็กสุด 24px, ใหญ่สุด 48px 
+               เปลี่ยนตามความกว้างหน้าจอ (5vw) */
+            font-size: clamp(24px, 5vw, 48px);
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Modern CSS</h1>
+        <p>ตัวอย่างการใช้ฟังก์ชัน linear-gradient, calc และ clamp ภายในไฟล์เดียว</p>
+    </div>
+
+</body>
+</html>
