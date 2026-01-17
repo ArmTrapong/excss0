@@ -1,0 +1,13 @@
+h1 {
+    color: green; /* ฟังก์ชันที่ 1 */
+}
+
+p {
+    background-color: lightblue; /* ฟังก์ชันที่ 2 */
+    padding: 10px;
+}
+
+.box {
+    border: 3px dashed purple; /* ฟังก์ชันที่ 3 */
+    padding: 15px;
+}
